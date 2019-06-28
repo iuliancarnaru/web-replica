@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from "@reach/router";
 import HeroContainer from './HeroContainer';
+import Sponsors from './Sponsors';
 
 const Hero = () => {
 
@@ -16,8 +17,8 @@ const Hero = () => {
           <Button>Nominate a home</Button>
           <Button primary>Speak to an expert</Button>
         </Navigation>
-        
       </HeaderWrapper>
+      <Sponsors />
       <HeroContainer />
     </HeroWrapper>
   )
@@ -27,7 +28,7 @@ export default Hero;
 
 const HeroWrapper = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   background-color: green;
   background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
