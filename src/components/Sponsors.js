@@ -10,7 +10,11 @@ const Sponsors = () => {
 
   return (
     <SponsorsStyled>
-      {Object.keys(sponsorsList).map((key, index) => console.log(sponsorsList[key]))}
+      {Object.keys(sponsorsList).map((key, index) => (
+        <div key={index + 1}>
+          <img srt={sponsorsList[key]} alt="sponsor" />
+        </div>
+      ))}
     </SponsorsStyled>
   );
 }

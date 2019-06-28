@@ -17,13 +17,13 @@ const Search = () => {
           <span>Check in: </span>
           <Calendar type="date" id="start" name="trip-start"
        value="2018-07-22"
-       min="2018-01-01" max="2018-12-31"></Calendar>
+       min="2018-01-01" max="2018-12-31" readOnly></Calendar>
         </DateContainer>
         <DateContainer>
           <span>Check out: </span>
           <Calendar type="date" id="start" name="trip-start"
        value="2018-07-22"
-       min="2018-01-01" max="2018-12-31"></Calendar>
+       min="2018-01-01" max="2018-12-31" readOnly></Calendar>
         </DateContainer>
         <ion-icon name="contacts"></ion-icon>
         <StyledSelect>

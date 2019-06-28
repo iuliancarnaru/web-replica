@@ -16,7 +16,7 @@ const HeroContainer = () => {
       <Search />
       <Option>or, browse by city</Option>
       {pageDetails.cities.map(city => (
-        <Citylink to="/">{city}</Citylink>
+        <Citylink key={city} to="/">{city}</Citylink>
       ))}
     </TextBox>
   );

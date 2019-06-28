@@ -13,7 +13,7 @@ const Hero = () => {
       <HeaderWrapper>
         <Logo>COMPANY LOGO</Logo>
         <Navigation>
-          {navigationLinks.map(link => (<Routerlink to="/">{link}</Routerlink>))}
+          {navigationLinks.map(link => (<Routerlink key={link} to="/">{link}</Routerlink>))}
           <Button>Nominate a home</Button>
           <Button primary>Speak to an expert</Button>
         </Navigation>
