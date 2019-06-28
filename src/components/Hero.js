@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from "@reach/router";
+import HeroContainer from './HeroContainer';
 
 const Hero = () => {
 
@@ -15,7 +16,9 @@ const Hero = () => {
           <Button>Nominate a home</Button>
           <Button primary>Speak to an expert</Button>
         </Navigation>
+        
       </HeaderWrapper>
+      <HeroContainer />
     </HeroWrapper>
   )
 }
@@ -28,7 +31,7 @@ const HeroWrapper = styled.div`
   background-color: green;
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
-  background-position: center top;
+  background-position: center bottom;
   position: relative;
 `;
 
@@ -56,8 +59,14 @@ const Routerlink = styled(Link)`
   color: white;
   font-size: 1.6rem;
   text-decoration: none;
+  border-bottom:  1px solid transparent;
+  transition: all .2s ease-in-out;
   &:not(:last-child) {
-    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    border-bottom:  1px solid white;
   }
 `;
 
@@ -68,14 +77,19 @@ const Button = styled.button`
   color: white;
   padding: 1rem 1.5rem;
   margin-left: .5rem;
+  transition: all .2s ease-in-out;
 
   &:hover {
-    background-color: white;
     color: #de007b;
   }
 
   ${props => props.primary && css`
       border: .1rem solid #de007b;
       background-color: #de007b;
+
+      &:hover {
+        background-color: #ff34a4;
+        color: white
+      }
   `}
 `;
