@@ -5,15 +5,20 @@ import styled from 'styled-components';
 const Sponsors = () => {
 
   const sponsorsList = {
-    src: 'https://smallimg.pngkey.com/png/small/79-791143_the-new-york-times-new-york-times-logo.png',
+    nyt: 'https://static.plumcache.com/static-images/logos/press/press-logo-new-york-times--white.svg?q=55&w=94&auto=format&vv=1',
+    evs: 'https://static.plumcache.com/static-images/logos/press/press-logo-evening-standard.svg?q=55&w=94&auto=format&vv=1',
+    baz: 'https://static.plumcache.com/static-images/logos/press/press-logo-harpers-bazaar--white.svg?q=55&w=94&auto=format&vv=1',
+    tel: 'https://static.plumcache.com/static-images/logos/press/press-logo-telegraph--white.svg?q=55&w=94&auto=format&vv=1',
+    tim: 'https://static.plumcache.com/static-images/logos/press/press-logo-the-times.svg?q=55&w=94&auto=format&vv=1',
+
   }
 
   return (
     <SponsorsStyled>
       {Object.keys(sponsorsList).map((key, index) => (
-        <div key={index + 1}>
-          <img srt={sponsorsList[key]} alt="sponsor" />
-        </div>
+        <ImageContainer key={index + 1}>
+          <img src={sponsorsList[key]} alt="sponsor" />
+        </ImageContainer>
       ))}
     </SponsorsStyled>
   );
@@ -27,4 +32,21 @@ const SponsorsStyled = styled.div`
   bottom: 0;
   width: 100%;
   height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+`;
+
+const ImageContainer = styled.div`
+  width: 200px;
+  height: auto;
+  margin-right: 3rem;
+  position: relative;
+
+ img {
+   width: 70%;
+   align-self: center;
+ }
+  /* height: 200px */
 `;
