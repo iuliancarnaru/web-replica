@@ -27,7 +27,7 @@ export default Hero;
 
 const HeroWrapper = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-color: green;
   background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;

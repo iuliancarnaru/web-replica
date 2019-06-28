@@ -13,18 +13,18 @@ const Search = () => {
           <option value="paris">Paris</option>
           <option value="new-york">New York</option>
         </StyledSelect>
-        <div>
+        <DateContainer>
           <span>Check in: </span>
-          <input type="date" id="start" name="trip-start"
+          <Calendar type="date" id="start" name="trip-start"
        value="2018-07-22"
-       min="2018-01-01" max="2018-12-31"></input>
-        </div>
-        <div>
+       min="2018-01-01" max="2018-12-31"></Calendar>
+        </DateContainer>
+        <DateContainer>
           <span>Check out: </span>
-          <input type="date" id="start" name="trip-start"
+          <Calendar type="date" id="start" name="trip-start"
        value="2018-07-22"
-       min="2018-01-01" max="2018-12-31"></input>
-        </div>
+       min="2018-01-01" max="2018-12-31"></Calendar>
+        </DateContainer>
         <ion-icon name="contacts"></ion-icon>
         <StyledSelect>
           <option>Guests</option>
@@ -45,19 +45,42 @@ const SearchContainer = styled.div`
   background-color: white;
   margin-top: 4rem;
   border-radius: .5rem;
+  font-family: 'Ubuntu', sans-serif;
+
+  span {
+    display: block;
+    color: #222;
+    margin-right: .5rem;
+    
+  }
 `;
 
 const SearchWrapper = styled.div`
   display:flex;
   align-items: center;
-  padding-left: 2rem;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-between;
 `;
 
 const StyledSelect = styled.select`
   width: 10rem;
   height: 4rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   border: none;
-  margin: .5rem;
+  margin: 1rem;
   background: none;
+  font-size: 1.6rem;
+`;
+
+const DateContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Calendar = styled.input`
+  &[type="date"] {
+    padding: 1rem;
+  }
 `;
